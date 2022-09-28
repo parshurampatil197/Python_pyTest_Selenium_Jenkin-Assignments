@@ -17,12 +17,12 @@ class TestSample():
 
     @pytest.mark.UI
     def test_login(self, test_setup):
-        driver.get("http://localhost:8080/")
-        driver.find_element_by_name("j_username").send_keys("parshuram")
-        driver.find_element_by_name("j_password").send_keys("28031894@Pp")
-        driver.find_element_by_name("Submit").click()
+        driver.get("https://practicetestautomation.com/practice-test-login/")
+        driver.find_element_by_id("username").send_keys("student")
+        driver.find_element_by_id("password").send_keys("Password123")
+        driver.find_element_by_id("submit").click()
         x = driver.title
-        assert x == "Dashboard [Jenkins]"
+        assert x == "Test Login | Practice Test Automation"
 
     #
     # def test_teardown():
