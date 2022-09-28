@@ -3,7 +3,7 @@ import paramiko
 import logging
 
 
-@pytest.fixture(autouse = True)
+@pytest.fixture()
 def connect_host():
     try:
         hostname = '192.168.0.4'
